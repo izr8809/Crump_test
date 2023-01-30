@@ -17,7 +17,7 @@ const Home = () => {
             </div>
 
             <div>
-                랩 스타일 테스트qwqw
+                랩 스타일 테스트qwqw11
             </div>
 
             <h2>
