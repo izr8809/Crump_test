@@ -7,7 +7,9 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Navbar />
+      <div className="navbardiv">
+        <Navbar />
+      </div>
       <div className="content">
 
         <Switch>

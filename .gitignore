@@ -29,3 +29,4 @@ yarn-error.log*
 data/
 src/img/
 dist/
+questions.json

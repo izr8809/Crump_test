@@ -42,12 +42,9 @@ export default function Share() {
       <TwitterShareButton style={{ marginRight: "20px" }} url={"localhost:3000"}>
         <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
       </TwitterShareButton>
-      <CopyToClipboard style={{ marginRight: "20px" }} text={"localhost:3000"}>
+      <CopyToClipboard style={{ marginTop: "0px" }} text={"localhost:3000"}>
         <URLShareButton>URL</URLShareButton>
       </CopyToClipboard>
-      <LineShareButton url={"localhost:3000"}>
-        <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
-      </LineShareButton>
     </>
   )
 }
