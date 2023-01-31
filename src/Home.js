@@ -7,7 +7,7 @@ const Home = () => {
     const history = useHistory();
 
     const goHome = () => {
-        history.push('/q')
+        history.push('/question')
     }
 
     return (
@@ -31,8 +31,7 @@ const Home = () => {
             <div>
                 테스트 공유하기
             </div>
-            <div>
-                
+            <div className="sharediv">
                 <Share />
             </div>
 

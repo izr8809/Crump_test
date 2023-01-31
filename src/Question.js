@@ -84,13 +84,13 @@ const Question = () => {
     }
 
     useEffect( () => {
-        fetch('http://localhost:8000/questions')
-        .then(res => {
-            return res.json();
-        })
-        .then( (data) => {
-            console.log(data)
-        }) 
+        // fetch('http://localhost:8000/questions')
+        // .then(res => {
+        //     return res.json();
+        // })
+        // .then( (data) => {
+        //     console.log(data)
+        // }) 
     }, [])
 
     return (

@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/",
   output: {
 	path: path.resolve(__dirname, "build"),
@@ -13,7 +13,7 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        exclude: [/node_modules/, require.resolve('./public/index.html')],
+        exclude: [/node_modules/, require.resolve('./dist/index.html')],
         use: {
             loader: 'file-loader',
             query: {
@@ -32,12 +32,12 @@ module.exports = {
           "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ],
         exclude: /node_modules/,
-      },
+      },+
     ],
   },
   plugins: [
 	new HtmlWebPackPlugin({
-	  template: './src/index.html'
+	  template: './build/index.html'
 	})
   ]
 };
