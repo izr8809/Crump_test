@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Question from "./Question";
 import { useLocation } from "react-router-dom";
 import Share from './share';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 const Result = () => {
 
@@ -25,7 +27,6 @@ const Result = () => {
 
     return (
         <div>
-            {blogs[index].info1}
             <div className="home">
                 
 
@@ -34,6 +35,7 @@ const Result = () => {
 
                 <h2>
                     아래는 설명
+                    {blogs[index].info1}
                 </h2>
 
                 <div className="my_div my_bg">
