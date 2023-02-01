@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@bitiumagency/web3-react-modal": "^6.0.0",
     "@ramonak/react-progress-bar": "^5.0.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,6 +14,7 @@
     "react-bootstrap": "^2.7.0",
     "react-copy-to-clipboard": "^5.1.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-share": "^4.4.1",

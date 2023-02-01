@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import Question from "./Question";
 import { useLocation } from "react-router-dom";
 import Share from './share';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import Modal from './Modal';
 
 const Result = () => {
 
     const location = useLocation()
+    const [openModal, openModalSet] = useState(true);
+
+    // useEffect( () => {
+    //   openModalSet(true)
+    // })
     
     const [blogs, setBlogs] = useState([
         { Type: 'ENFP', info1: '1 ipsum...', info2: '1', id: 1 },
@@ -19,6 +23,7 @@ const Result = () => {
         { Type: 'N', info1: '1 ipsum...', info2: '1', id: 1 },
         { Type: 'N', info1: '1 ipsum...', info2: '1', id: 1 },
     ])
+
     let index =0
     for (let i = 0 ; i< blogs.length; i++){
         if(blogs[i].Type == location.data)
@@ -28,11 +33,11 @@ const Result = () => {
     return (
         <div>
             <div className="home">
-                
+                {/* <button onClick={openModalSet(true)}>123 </button> */}
 
+                {openModal && <Modal setOpenModal={openModalSet} /> }
                 <div className="my_div my_bg">
                 </div>
-
                 <h2>
                     아래는 설명
                     {blogs[index].info1}
