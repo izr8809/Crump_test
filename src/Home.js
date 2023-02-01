@@ -34,7 +34,7 @@ const Home = () => {
                         <AnimatedNumbers
                             id = "AnimatedNumbers"
                             animateToNumber={num}
-                            fontStyle={{ fontSize: 43 }}
+                            fontStyle={{ fontSize: 57 }}
                             includeComma = {true}
                             configs={(number, index) => {
                             return { mass: 1, tension: 230 * (index + 1), friction: 140 };
