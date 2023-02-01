@@ -6,11 +6,16 @@ import AnimatedNumbers from "react-animated-numbers";
 
 const Home = () => {
     const history = useHistory();
-    const [num, setNum] = useState(113333);
+    const num_from_Server = 133333;
+    const [num, setNum] = useState(999999);
 
     const goHome = () => {
         history.push('/question')
     }
+
+    setTimeout(() => {
+        setNum(num_from_Server);
+    }, 1000);
 
     return (
         <BrowserRouter>
