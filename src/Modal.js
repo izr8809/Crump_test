@@ -29,7 +29,9 @@ function Modal({ setOpenModal }) {
           >
             Cancel
           </button>
-          <button>Go Crump</button>
+          <a href ="https://www.crump.co.kr/">
+            <button >Go Crump</button>
+          </a>
         </div>
       </div>
     </div>
