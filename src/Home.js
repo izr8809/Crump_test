@@ -34,13 +34,13 @@ const Home = () => {
                         <AnimatedNumbers
                             id = "AnimatedNumbers"
                             animateToNumber={num}
-                            fontStyle={{ fontSize: 57 }}
+                            fontStyle={{ fontSize: 36 }}
                             includeComma = {true}
                             configs={(number, index) => {
                             return { mass: 1, tension: 230 * (index + 1), friction: 140 };
                             }}
                         ></AnimatedNumbers> 
-                        <h3>명</h3>
+                        {/* <h1>명</h1> */}
                 </div>
                 <div className="nextdiv">
                     <button onClick={goHome}>Next</button>
