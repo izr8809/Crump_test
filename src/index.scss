@@ -9,7 +9,8 @@ $max-width : 350px;
   color: #111;
 }
 .navbar {
-  padding: 40px;
+  padding-top: 40px;
+  padding-bottom : 20px;
   display: flex;
   align-items: center;
   max-width: $max-width;
@@ -106,4 +107,5 @@ h2{
   align-items: center; /* 수직 정렬 */
   flex-direction: row; /* default: row */
   justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
+  height : 48px;
 }

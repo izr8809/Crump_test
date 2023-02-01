@@ -14,7 +14,6 @@ const Question = () => {
     const history = useHistory();
     const [index, setIndex] = useState(0);
     const [barpercent, setBarpercent] = useState(0);
-
     const [blogs, setBlogs] = useState(null)
     
     const changeQuestion = () => {
@@ -96,7 +95,7 @@ const Question = () => {
             <div className="my_div my_bg">
             </div>
             <h2>
-                1212{blogs && blogs[index].Story}
+                {blogs && blogs[index].Story}
             </h2>
 
             <button className = "question_bt" onClick={changeQuestion}>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Question from "./Question";
 import { useLocation } from "react-router-dom";
 import Share from './share';
 import Modal from './Modal';
@@ -12,23 +11,29 @@ const Result = () => {
     // useEffect( () => {
     //   openModalSet(true)
     // })
-    
-    const [blogs, setBlogs] = useState([
-        { Type: 'ENFP', info1: '1 ipsum...', info2: '1', id: 1 },
-        { Type: 'ISFP', info1: '2 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '3 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '4 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '5 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '6 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '1 ipsum...', info2: '1', id: 1 },
-        { Type: 'N', info1: '1 ipsum...', info2: '1', id: 1 },
-    ])
+    const [index, setIndex] = useState(0) 
+    const [blogs, setBlogs] = useState(null)
 
-    let index =0
-    for (let i = 0 ; i< blogs.length; i++){
-        if(blogs[i].Type == location.data)
-            index = i
-    }
+
+    useEffect( () => {
+        fetch('/resultdata')
+        .then(res => {
+            return res.json();
+        })
+        .then( (data) => {
+            console.log(data)
+            setBlogs(data)
+            
+            for (let i = 0 ; i< data.length; i++){
+                if(data[i].Type === location.data)
+                    setIndex(i)
+            }
+
+        }) 
+        
+
+
+    }, [])
 
     return (
         <div>
@@ -38,11 +43,14 @@ const Result = () => {
                 {openModal && <Modal setOpenModal={openModalSet} /> }
                 <div className="my_div my_bg">
                 </div>
-                <h2>
-                    아래는 설명
-                    {blogs[index].info1}
-                </h2>
-
+                <li>{blogs && blogs[index].Info1}</li>
+                <li>{blogs && blogs[index].Info2}</li>
+                <li>{blogs && blogs[index].Info3}</li>
+                <li>{blogs && blogs[index].Info4}</li>
+                <li>{blogs && blogs[index].Info5}</li>
+                <li>찰떡궁합 {blogs && blogs[index].Best}</li>
+                <li>상극 {blogs && blogs[index].Worst}</li>
+                
                 <div className="my_div my_bg">
                 </div>
 
