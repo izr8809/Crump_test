@@ -1,0 +1,31 @@
+{
+    "questions":[
+        {
+            "Category" : "S/N",
+            "Type" : "S",
+            "Qtype1" : "질문1번",
+            "Qtype2" : "질문2번" ,
+            "id" : 1
+        },
+        {
+            "Category" : "S/N",
+            "Type" : "S",
+            "Qtype1" : "질문1번",
+            "Qtype2" : "질문2번" ,
+            "id" : 2
+        },
+        {
+            "Category" : "S/N",
+            "Type" : "S",
+            "Qtype1" : "질문1번",
+            "Qtype2" : "질문2번" ,
+            "id" : 3
+        }
+
+    ]
+
+
+
+
+
+}

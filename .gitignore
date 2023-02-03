@@ -25,7 +25,4 @@ yarn-error.log*
 
 
 #folder ignore
-data/
-src/img/
 # dist/
-questions.json
