@@ -5,12 +5,16 @@ import ProgressBar from "@ramonak/react-progress-bar";
 
 
 const Question = () => {
-    var NorS = 0
-    var EorI = 0
-    var TorF = 0
-    var JorP = 0
-    var MBTI = ""
-
+    const [NorS, setNorS] = useState(0);
+    const [EorI, setEorI] = useState(0);
+    const [TorF, setTorF] = useState(0);
+    const [JorP, setJorP] = useState(0);
+    const [MBTI, setMBTI] = useState("");
+    var x = 0;
+    var y = 0;
+    var z = 0;
+    var r = 0;
+    var q = "";
     const history = useHistory();
     const [index, setIndex] = useState(0);
     const [barpercent, setBarpercent] = useState(0);
@@ -22,19 +26,18 @@ const Question = () => {
         if(index<11){
             switch (blogs[index].Type) {
             case "N":
-                NorS += 1
-            //   alert( NorS );
+                setNorS(NorS +1)
               break;
             case "E":
-                EorI += 1
+                setEorI(EorI +1)
             //   alert( EorI );
               break;
             case "T":
-                TorF += 1
+                setTorF(TorF +1)
             //   alert( TorF);
               break;
             case "J":
-                JorP += 1
+                setJorP(JorP +1)
             //   alert( JorP);
               break;
                 
@@ -49,7 +52,24 @@ const Question = () => {
             calMBTI()
             history.push({
                 pathname:'/result',
-                data: MBTI,
+                data: q,
+            
+            })
+        }
+        
+    }
+    const changeQuestion2 = () => {
+        //db에서 가져오기 
+
+        if(index<11){
+            setIndex(index + 1)
+            setBarpercent(barpercent + 9)
+        }
+        else{
+            calMBTI()
+            history.push({
+                pathname:'/result',
+                data: q,
             
             })
         }
@@ -57,23 +77,28 @@ const Question = () => {
     }
 
     const calMBTI = () => {
-        if(EorI >=2)
-            MBTI += "E"
-        else   
-            MBTI += "I"
+        alert(NorS + EorI + TorF + JorP)
+        if(EorI >=2 ||  x >=2){
+            setMBTI(MBTI + "E")
+            q += "E"
+        }
+        else   {
+            setMBTI(MBTI + "I")
+            q += "I"
 
-        if(NorS >=2)
-            MBTI += "N"
+        }
+        if(NorS >=2 ||  y >=2)
+            q += "N"
+        else  
+            q += "S"
+        if(TorF >=2 ||  z >=2)
+            q += "T"
         else   
-            MBTI += "S"
-        if(TorF >=2)
-            MBTI += "T"
+            q += "F"
+        if(JorP >=2 ||  r >=2)
+            q += "J"
         else   
-            MBTI += "F"
-        if(JorP >=2)
-            MBTI += "J"
-        else   
-            MBTI += "P"
+            q += "P"
 
     }
 
@@ -88,20 +113,20 @@ const Question = () => {
 
         }) 
     }, [])
+    useEffect( () => {
+    }, [NorS, MBTI])
 
     return (
         <div className="home">
             <ProgressBar completed={barpercent} />
-            <div className="my_div my_bg">
-            </div>
-            <h2>
+            <div className='question_story'>
                 {blogs && blogs[index].Story}
-            </h2>
+            </div>
 
             <button className = "question_bt" onClick={changeQuestion}>
                 {blogs && blogs[index].Qtype1}
             </button>
-            <button className = "question_bt" onClick={changeQuestion}>
+            <button className = "question_bt" onClick={changeQuestion2}>
                 {blogs && blogs[index].Qtype2}
             </button>
         </div>

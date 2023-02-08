@@ -1,17 +1,12 @@
 const Navbar = () => {
-    return (
-      <nav className="navbar">
-        <h1>크럼프 래퍼 테스트</h1>
-        <div className="links">
-          {/* <a href="/">Home</a>
-          <a href="/create" style={{ 
-            color: 'white', 
-            backgroundColor: '#f1356d',
-            borderRadius: '8px' 
-          }}>New Blog</a> */}
-        </div>
-      </nav>
-    );
-  }
-   
-  export default Navbar;
+  return (
+    <nav className="navbar" >
+      <div id="title">
+        <text>TEST TITLE</text>
+
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

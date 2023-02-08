@@ -20,6 +20,17 @@ module.exports = {
                     loader: 'babel-loader'				// babel loader가 파이프를 통해 js 코드를 불러옴
                 }
             },
+            {
+                test: /\.(jpg|jpeg|gif|png)$/,
+                use: {
+                  loader: 'file-loader',
+                  options: {
+                    name: '[name].[ext]',
+                    publicPath: 'src/img',
+                    outputPath: 'img',
+                  }
+                }
+              },
             { // 2
                 test: /\.html$/,
                 use: [

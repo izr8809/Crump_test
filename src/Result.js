@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import Share from './share';
 import Modal from './Modal';
 
+
 const Result = () => {
 
     const location = useLocation()
@@ -41,28 +42,26 @@ const Result = () => {
                 {/* <button onClick={openModalSet(true)}>123 </button> */}
 
                 {openModal && <Modal setOpenModal={openModalSet} /> }
-                <div className="my_div my_bg">
-                </div>
-                <li>{blogs && blogs[index].Info1}</li>
-                <li>{blogs && blogs[index].Info2}</li>
-                <li>{blogs && blogs[index].Info3}</li>
-                <li>{blogs && blogs[index].Info4}</li>
-                <li>{blogs && blogs[index].Info5}</li>
-                <li>찰떡궁합 {blogs && blogs[index].Best}</li>
-                <li>상극 {blogs && blogs[index].Worst}</li>
                 
-                <div className="my_div my_bg">
-                </div>
+                <div className="my_div">
+                    <img className="my_bg" src = {`img/${location.data}.jpg`}>
+                    </img>
+                    
+                    <div className='character_info'>
+                        <div>
+                                <li>{blogs && blogs[index].Info2}</li>
+                                <li>{blogs && blogs[index].Info3}</li>
+                                <li>{blogs && blogs[index].Info4}</li>
+                                <li>{blogs && blogs[index].Info5}</li>
+                                <li>찰떡궁합 {blogs && blogs[index].Best}</li>
+                                <li>상극 {blogs && blogs[index].Worst}</li>
 
-                <h2>
-                    아래는 상품정보
-                </h2>
-                <div className="nextdiv">
-
+                        </div>
+                    </div>
                 </div>
-                <h2>
-                    테스트 공유하기
-                </h2>
+                    
+
+                
                 <div className="sharediv">
                     <Share />
                 </div>
