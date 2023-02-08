@@ -79,7 +79,7 @@ const Question = () => {
     const calMBTI = () => {
         // alert(NorS + EorI + TorF + JorP)
         if(EorI >=2 ||  x >=2){
-            setMBTI(MBTI + "E")
+            // setMBTI(MBTI + "E")
             q += "E"
         }
         else   {
