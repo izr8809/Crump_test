@@ -14,7 +14,7 @@ function App() {
           <Switch>
             <Route exact path="/">
               <div id="subtitle">
-                <text>SUB TITLE</text>
+                <text>내가 래퍼라면?</text>
               </div>
               <Home />
             </Route>

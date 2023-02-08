@@ -5,7 +5,6 @@ $max-width : 400px;
 /* base styles */
 * {
   margin: 0;
-  background-color: #121212;
   font-family: "Quicksand";
 }
 body{
@@ -122,14 +121,14 @@ h2{
 }
 #title{
   align-content: center;
-  font-size:3rem;
+  font-size:2.3rem;
   width: 100%;
   font-weight: bold;
 }
 
 #subtitle{
-  font-size:2rem;  
-  margin-top : -30px;
+  font-size:1.5rem;  
+  margin-top : -15px;
   margin-bottom : 20px;
   display: flex;
   align-items: center; /* 수직 정렬 */
@@ -138,7 +137,19 @@ h2{
 }
 .TESTER text{
   margin-top : 40px;
-  font-size: 2.3rem;
+  font-size: 1.3rem;
+  display: flex;
+  font-weight: bold;
+  align-items: center; /* 수직 정렬 */
+  flex-direction: row; /* default: row */
+  justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
+  color: #525252;
+}
+
+.TESTER2 text{
+  margin-top : 20px;
+  margin-bottom : 20px;
+  font-size: 1.3rem;
   display: flex;
   font-weight: bold;
   align-items: center; /* 수직 정렬 */
@@ -156,9 +167,10 @@ button {
   border-radius: 8px;
   text-decoration: none;
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   background-color: #3F3F3F;
+  text-align: left     
 }
 .sharediv{
   margin-top: 10px;
@@ -185,8 +197,29 @@ button {
 .character_info div{
 
   width: 80%;
+  font-weight: bold;
+  color:#3F3F3F;
+  align-content: start;
+  text-align: left     
 }
-
+.character_info ul li span{
+  justify-content: start; /* flex direction에 대해서 정렬방식 선택 */
+}
+span{
+  color: black;
+}
+ul { padding-left: 5%; list-style-position:outside; }
 li{
-  list-style: none;
+  // list-style: none;
+  margin-top : 10px;
+  list-style-type:disc; padding-left:-5%;
+  float:left;
+  text-align: left     
+}
+.question_story{
+  padding-top : 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  align-content: center;
+
 }

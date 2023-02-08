@@ -24,19 +24,17 @@ const Home = () => {
       <div className="home">
         <div className="my_div">
           <img className="my_bg" src = {'./img/main.jpg'}>
-
           </img>
-
         </div>
         
         <div className="nextdiv">
-          <button onClick={goHome}>NeTxt</button>
+          <button onClick={goHome}>테스트 시작</button>
         </div>
 
 
 
         <div className="TESTER">
-          <text>TESTER</text>
+          <text>참여자 수</text>
           </div>
         <div className="countingdiv">
           <AnimatedNumbers

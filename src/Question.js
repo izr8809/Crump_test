@@ -119,8 +119,12 @@ const Question = () => {
     return (
         <div className="home">
             <ProgressBar completed={barpercent} />
-            <div className='question_story'>
-                {blogs && blogs[index].Story}
+            <div className='question_div'>
+                <div className='question_story'>
+                    <text>{blogs && blogs[index].Story}</text>
+                    
+                </div>
+
             </div>
 
             <button className = "question_bt" onClick={changeQuestion}>

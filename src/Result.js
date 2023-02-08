@@ -41,23 +41,35 @@ const Result = () => {
             <div className="home">
                 {/* <button onClick={openModalSet(true)}>123 </button> */}
 
-                {openModal && <Modal setOpenModal={openModalSet} /> }
+                {/* {openModal && <Modal setOpenModal={openModalSet} /> } */}
                 
                 <div className="my_div">
-                    <img className="my_bg" src = {`img/${location.data}.jpg`}>
-                    </img>
+                    <img className="my_bg" src = {`img/${location.data}.jpg`} />
+                    <div className="TESTER2"><text> {blogs && blogs[index].name}</text></div>
+                     
                     
                     <div className='character_info'>
                         <div>
-                                <li>{blogs && blogs[index].Info2}</li>
-                                <li>{blogs && blogs[index].Info3}</li>
-                                <li>{blogs && blogs[index].Info4}</li>
-                                <li>{blogs && blogs[index].Info5}</li>
-                                <li>찰떡궁합 {blogs && blogs[index].Best}</li>
-                                <li>상극 {blogs && blogs[index].Worst}</li>
+                            <ul>
+                                    <li> <span>{blogs && blogs[index].Info2}</span></li>
+                                    <li> <span>{blogs && blogs[index].Info3}</span></li>
+                                    <li> <span>{blogs && blogs[index].Info4}</span></li>
+                                    <li> <span>{blogs && blogs[index].Info5}</span></li>
+                                    <li> <span>{blogs && blogs[index].Info2}</span></li>
+                                    <li><span> 찰떡궁합 {blogs && blogs[index].Best} 상극 {blogs && blogs[index].Worst} </span></li>
+                                    
 
+                            </ul>
                         </div>
                     </div>
+                    
+                <div className="TESTER2">
+                    <text>추천 상품</text>
+                </div>
+                    <a href="https://crump.co.kr/">
+                        <img className="my_bg" src = {`img/${location.data}_clo.jpg`} />
+                    </a>
+                    
                 </div>
                     
 

@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <nav className="navbar" >
       <div id="title">
-        <text>TEST TITLE</text>
+        <text>크럼프 래퍼 테스트</text>
 
       </div>
     </nav>
