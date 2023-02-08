@@ -77,7 +77,7 @@ const Question = () => {
     }
 
     const calMBTI = () => {
-        alert(NorS + EorI + TorF + JorP)
+        // alert(NorS + EorI + TorF + JorP)
         if(EorI >=2 ||  x >=2){
             setMBTI(MBTI + "E")
             q += "E"
@@ -123,10 +123,10 @@ const Question = () => {
                 <div className='question_story'>
                     <text>{blogs && blogs[index].Story}</text>
                     
-                </div>
 
             </div>
 
+                </div>
             <button className = "question_bt" onClick={changeQuestion}>
                 {blogs && blogs[index].Qtype1}
             </button>
