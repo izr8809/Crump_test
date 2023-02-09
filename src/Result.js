@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Share from "./share";
+import { useParams } from "react-router-dom";
 import Modal from "./Modal";
 
-const Result = ({ color, name }) => {
+const Result = (props) => {
   const location = useLocation();
   const [openModal, openModalSet] = useState(true);
+  const params = useParams()
 
   // useEffect( () => {
   //   openModalSet(true)
@@ -19,11 +21,10 @@ const Result = ({ color, name }) => {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         setBlogs(data);
 
         for (let i = 0; i < data.length; i++) {
-          if (data[i].Type === location.data) setIndex(i);
+          if (data[i].Type === params.MBTI) setIndex(i);
         }
       });
   }, []);
@@ -36,7 +37,7 @@ const Result = ({ color, name }) => {
         {/* {openModal && <Modal setOpenModal={openModalSet} /> } */}
 
         <div className="my_div">
-          <img className="my_bg" src={`img/${location.data}.jpg`} />
+          <img className="my_bg" src={`../img/${params.MBTI}.jpg`} alt={"no imaage"} />
           <div className="TESTER4">
             <text>
               {location.data} {blogs && blogs[index].name}
@@ -87,7 +88,7 @@ const Result = ({ color, name }) => {
             <text> 아래 이미지 클릭시, 상품 링크로 이동</text>
           </div>
           <a href="https://crump.co.kr/">
-            <img className="my_bg" src={`img/${location.data}_clo.jpg`} />
+            <img className="my_bg" src={`../img/${params.MBTI}_clo.jpg`}alt={"no imaage"} />
           </a>
         </div>
 

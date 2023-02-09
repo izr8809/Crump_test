@@ -3,8 +3,8 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Share from "./share";
 import AnimatedNumbers from "react-animated-numbers";
-import logo from './img/11.png';
-
+import logo from "./img/11.png";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const history = useHistory();
@@ -14,32 +14,37 @@ const Home = () => {
   const goHome = () => {
     history.push("/question");
   };
-  useEffect( () => {
-    fetch('/number')
-    .then(res => {
+  useEffect(() => {
+    fetch("/number")
+      .then((res) => {
         return res.json();
-    })
-    .then( (data) => {
-      setTimeout(() => {
-        setNum(data[0].number)
-      }, 1000);
-    
-    }) 
-}, [])
+      })
+      .then((data) => {
+        setTimeout(() => {
+          setNum(data[0].number);
+        }, 1000);
+      });
+  }, []);
 
   return (
     <BrowserRouter>
+      <Helmet
+        meta={[
+          { property: "og:title", content: "타이틀" },
+          { property: "og:description", content: "포스트의 설명입니다." },
+          { property: "og:image", content: "./img/main.jpg" },
+
+          { name: "twitter:card", content: "summary" },
+        ]}
+      />
       <div className="home">
         <div className="my_div">
-          <img className="my_bg" src = {'./img/main.jpg'}>
-          </img>
+          <img className="my_bg" src={"./img/main.jpg"}></img>
         </div>
-        
+
         <div className="nextdiv">
           <button onClick={goHome}>테스트 시작</button>
         </div>
-
-
 
         <div className="TESTER">
           <text>참여자 수</text>
@@ -48,7 +53,7 @@ const Home = () => {
           <AnimatedNumbers
             id="AnimatedNumbers"
             animateToNumber={num}
-            fontStyle={{ fontSize: 36,  color:'#525252'}}
+            fontStyle={{ fontSize: 36, color: "#525252" }}
             includeComma={true}
             configs={(number, index) => {
               return { mass: 1, tension: 230 * (index + 1), friction: 140 };

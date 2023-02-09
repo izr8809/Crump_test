@@ -21,7 +21,7 @@ function App() {
             <Route path="/question">
               <Question />
             </Route>
-            <Route path="/result">
+            <Route path="/result/:MBTI">
               <div id="subtitle">
                 <text>내가 래퍼라면?</text>
               </div>

@@ -51,7 +51,7 @@ const Question = () => {
         else{
             calMBTI()
             history.push({
-                pathname:'/result',
+                pathname:`/result/${q}`,
                 data: q,
             
             })
@@ -68,7 +68,7 @@ const Question = () => {
         else{
             calMBTI()
             history.push({
-                pathname:'/result',
+                pathname:`/result/${q}`,
                 data: q,
             
             })

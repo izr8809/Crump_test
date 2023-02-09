@@ -1,6 +1,7 @@
 import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from "styled-components";
+import { useLocation } from "react-router-dom";
 // import logo from './img/url2.png';
 
 import {
@@ -34,7 +35,9 @@ const URLShareButton = styled.button`
 
 export default function Share() {
     
+  const location = useLocation();
 	const currentUrl = window.location.href;
+  URL = URL + useLocation.pathname
   return (
     <>
       <div className="icon">
@@ -50,9 +53,9 @@ export default function Share() {
       </TwitterShareButton>
       <CopyToClipboard text={URL} >
         <a onClick={() => {alert("링크가 복사되었습니다")}}>
-          <img style = {{ marginBottom:"3px", marginLeft: "5px"}} src="./img/url2.png" alt="" />
+          <img style = {{ marginBottom:"3px", marginLeft: "5px"}} src="../img/url2.png" alt="" />
         </a>
-        </CopyToClipboard>
+      </CopyToClipboard>
     </>
   )
 }
