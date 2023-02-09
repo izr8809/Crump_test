@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Share from "./share";
@@ -14,10 +14,18 @@ const Home = () => {
   const goHome = () => {
     history.push("/question");
   };
-
-  setTimeout(() => {
-    setNum(num_from_Server);
-  }, 1000);
+  useEffect( () => {
+    fetch('/number')
+    .then(res => {
+        return res.json();
+    })
+    .then( (data) => {
+      setTimeout(() => {
+        setNum(data[0].number)
+      }, 1000);
+    
+    }) 
+}, [])
 
   return (
     <BrowserRouter>
@@ -35,7 +43,7 @@ const Home = () => {
 
         <div className="TESTER">
           <text>참여자 수</text>
-          </div>
+        </div>
         <div className="countingdiv">
           <AnimatedNumbers
             id="AnimatedNumbers"
@@ -49,6 +57,9 @@ const Home = () => {
           {/* <h1>명</h1> */}
         </div>
 
+        <div className="TESTER_share">
+          <text>공유하기</text>
+        </div>
         <div className="sharediv">
           <Share />
         </div>
