@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .server.js
-
+.number.json
 
 #folder ignore
 # dist/
