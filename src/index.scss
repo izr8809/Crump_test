@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @font-face {
-  font-family: 'TTTtangsbudaejjigaeB';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');
+  font-family: 'KIMM_Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'KIMM_Light';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Light.woff2') format('woff2');
+  font-weight: 300;
   font-style: normal;
 }
 $max-width : 400px;
@@ -10,7 +16,7 @@ $max-width : 400px;
 /* base styles */
 * {
   margin: 0;
-  font-family: "TTTtangsbudaejjigaeB";
+  font-family: "KIMM_Light";
 }
 body{
   color: #3F3F3F
@@ -19,11 +25,18 @@ body{
   padding-top: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-weight: 1000;
   display: flex;
   align-items: center;
   align-content: center;
   max-width: $max-width;
   margin: 0 auto;
+  font-weight: bold;
+  font-family: "KIMM_Bold";
+  
+}
+.navbar div text {
+  font-family: "KIMM_Bold";
   
 }
 .navbar .links {
@@ -190,6 +203,8 @@ h2{
   flex-direction: row; /* default: row */
   justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
   color: #525252;
+  
+  font-family: "KIMM_Bold";
 }
 button {
   margin-top : 20px;
@@ -239,6 +254,8 @@ button {
 }
 .character_info ul li span{
   justify-content: start; /* flex direction에 대해서 정렬방식 선택 */
+  word-spacing: 5px;
+  line-height: 1.8;
 }
 span{
   color: black;
@@ -249,7 +266,8 @@ li{
   margin-top : 10px;
   list-style-type:disc; padding-left:-5%;
   float:left;
-  text-align: left     
+  text-align: left;     
+  margin-bottom : 10px;
 }
 .question_story{
   padding-top : 20px;
@@ -266,8 +284,19 @@ li{
 }
 .TESTER5 text{
   margin-bottom : 20px;
+  font-size: 0.3rem;
+  font-family: "KIMM_Bold";
 }
 .TESTER5{
   
   margin-bottom : 40px;
+}
+.TESTER6 text{
+  margin-bottom : 10px;
+  font-size: 0.8rem;
+  font-family: "KIMM_Bold";
+}
+.TESTER6{
+  margin-top : -20px;
+  margin-bottom : 20px;
 }

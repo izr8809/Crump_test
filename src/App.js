@@ -22,6 +22,9 @@ function App() {
               <Question />
             </Route>
             <Route path="/result">
+              <div id="subtitle">
+                <text>내가 래퍼라면?</text>
+              </div>
               <Result />
             </Route>
           </Switch>

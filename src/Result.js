@@ -39,12 +39,11 @@ const Result = ({ color, name }) => {
           <img className="my_bg" src={`img/${location.data}.jpg`} />
           <div className="TESTER4">
             <text>
-              {" "}
               {location.data} {blogs && blogs[index].name}
             </text>
           </div>
           <div className="TESTER5">
-            <text> (출처 : 하입비스트)</text>
+            <text> (MBTI 출처 : 하입비스트)</text>
           </div>
 
           <div className="character_info">
@@ -83,6 +82,9 @@ const Result = ({ color, name }) => {
 
           <div className="TESTER2">
             <text> &#128161; 추천 상품</text>
+          </div>
+          <div className="TESTER6">
+            <text> 아래 이미지 클릭시, 상품 링크로 이동</text>
           </div>
           <a href="https://crump.co.kr/">
             <img className="my_bg" src={`img/${location.data}_clo.jpg`} />

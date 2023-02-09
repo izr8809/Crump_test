@@ -31,6 +31,7 @@ const URLShareButton = styled.button`
 	// }
 `;
 
+
 export default function Share() {
     
 	const currentUrl = window.location.href;
@@ -48,8 +49,10 @@ export default function Share() {
         <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
       </TwitterShareButton>
       <CopyToClipboard text={URL} >
-        <img style = {{ marginBottom:"3px", marginLeft: "5px"}} src="./img/url2.png" alt="" />
-      </CopyToClipboard>
+        <a onClick={() => {alert("링크가 복사되었습니다")}}>
+          <img style = {{ marginBottom:"3px", marginLeft: "5px"}} src="./img/url2.png" alt="" />
+        </a>
+        </CopyToClipboard>
     </>
   )
 }
