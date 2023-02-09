@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @font-face {
-  font-family: 'KIMM_Bold';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
-  font-weight: 700;
+  font-family: 'GmarketSansBold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'KIMM_Light';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Light.woff2') format('woff2');
-  font-weight: 300;
+  font-family: 'GmarketSansMedium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
 }
 $max-width : 400px;
-
 /* base styles */
 * {
   margin: 0;
-  font-family: "KIMM_Light";
+  font-family: "GmarketSansMedium";
+  // background-color: #EEEEEE;
 }
 body{
   color: #3F3F3F
@@ -32,11 +32,11 @@ body{
   max-width: $max-width;
   margin: 0 auto;
   font-weight: bold;
-  font-family: "KIMM_Bold";
+  font-family: "GmarketSansMedium";
   
 }
 .navbar div text {
-  font-family: "KIMM_Bold";
+  font-family: "GmarketSansMedium";
   
 }
 .navbar .links {
@@ -99,7 +99,7 @@ h2{
 }
 .question_story text{
   line-height: 1.8;
-  word-spacing: 2px;
+  word-spacing: 0.2px;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -204,7 +204,7 @@ h2{
   justify-content: center; /* flex direction에 대해서 정렬방식 선택 */
   color: #525252;
   
-  font-family: "KIMM_Bold";
+  font-family: "GmarketSansMedium";
 }
 button {
   margin-top : 20px;
@@ -254,7 +254,7 @@ button {
 }
 .character_info ul li span{
   justify-content: start; /* flex direction에 대해서 정렬방식 선택 */
-  word-spacing: 5px;
+  word-spacing: 0.2px;
   line-height: 1.8;
 }
 span{
@@ -285,7 +285,7 @@ li{
 .TESTER5 text{
   margin-bottom : 20px;
   font-size: 0.3rem;
-  font-family: "KIMM_Bold";
+  font-family: "GmarketSansMedium";
 }
 .TESTER5{
   
@@ -294,9 +294,13 @@ li{
 .TESTER6 text{
   margin-bottom : 10px;
   font-size: 0.8rem;
-  font-family: "KIMM_Bold";
+  font-family: "GmarketSansMedium";
 }
 .TESTER6{
   margin-top : -20px;
   margin-bottom : 20px;
+}
+
+p, a, h1, h2, h3, h4, h5, h6 , text{
+  transform: skew(-0.1deg);
 }
