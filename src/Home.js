@@ -28,15 +28,10 @@ const Home = () => {
 
   return (
     <BrowserRouter>
-      <Helmet
-        meta={[
-          { property: "og:title", content: "타이틀" },
-          { property: "og:description", content: "포스트의 설명입니다." },
-          { property: "og:image", content: "./img/main.jpg" },
-
-          { name: "twitter:card", content: "summary" },
-        ]}
-      />
+      <Helmet>
+        <title>Learning React Helmet!</title>
+        <meta name='description' content='Beginner friendly page for learning React Helmet.' />
+      </Helmet>
       <div className="home">
         <div className="my_div">
           <img className="my_bg" src={"./img/main.jpg"}></img>
