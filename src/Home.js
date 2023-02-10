@@ -39,7 +39,7 @@ const Home = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="크럼프 래퍼 테스트" />
         <meta property="og:description" content="나는 어떤 래퍼? By crump" />
-        <meta property="og:image" content="../src/img/main.jpg" />
+        {/* <meta property="og:image" content="../src/img/main.jpg" /> */}
         <title>크럼프 래퍼 테스트</title>
       </Helmet>
       <div className="home">
