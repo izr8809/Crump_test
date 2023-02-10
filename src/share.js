@@ -2,8 +2,6 @@ import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import styled from "styled-components";
 import { useLocation } from "react-router-dom";
-import { shareKakao } from "./shareKakaoLink";
-import { useState, useEffect } from "react";
 // import logo from './img/url2.png';
 
 import {
@@ -37,17 +35,6 @@ const URLShareButton = styled.button`
 
 export default function Share() {
     
-
-useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
-    script.async = true;
-    document.body.appendChild(script);
-    return () => document.body.removeChild(script);
-
-
-
-}, []);
   const location = useLocation();
 	const currentUrl = window.location.href;
   URL = currentUrl
@@ -58,8 +45,9 @@ useEffect(() => {
           <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
         </FacebookShareButton>
       </div>
-      <button style={{ marginRight: "20px" }} onClick={shareKakao}>
-      </button>
+      <LineShareButton style={{ marginRight: "20px" }} url={URL}>
+        <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+      </LineShareButton>
       <TwitterShareButton style={{ marginRight: "20px" }} url={URL}>
         <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
       </TwitterShareButton>
