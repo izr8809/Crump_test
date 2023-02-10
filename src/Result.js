@@ -68,7 +68,7 @@ const Result = (props) => {
                 </li>
                 <li>
                   {" "}
-                  <span>{blogs && blogs[index].Info2}</span>
+                  <span>{blogs && blogs[index].Info1}</span>
                 </li>
                 <li>
                   <span>
