@@ -38,7 +38,7 @@ const Home = () => {
         <meta property="og:url" content="http://35.247.42.172:5000/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="크럼프 래퍼 테스트" />
-        <meta property="og:description" content="나는 어떤 래퍼?" />
+        <meta property="og:description" content="나는 어떤 래퍼? By crump" />
         <meta property="og:image" content="../src/img/main.jpg" />
         <title>크럼프 래퍼 테스트</title>
       </Helmet>
