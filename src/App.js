@@ -3,9 +3,7 @@ import Home from "./Home";
 import Question from "./Question";
 import Result from "./Result";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Helmet } from "react-helmet";
 function App() {
-	const currentUrl = window.location.href;
   return (
     <Router>
       <div className="App">
