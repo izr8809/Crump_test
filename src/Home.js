@@ -11,6 +11,7 @@ const Home = () => {
   const num_from_Server = 133333;
   const [num, setNum] = useState(999999);
 
+	const currentUrl = window.location.href;
   const goHome = () => {
     history.push("/question");
   };
@@ -31,11 +32,11 @@ const Home = () => {
       <Helmet>
         <title>크럼프 래퍼 테스트</title>
         <meta name='description' content='Beginner friendly page for learning React Helmet.' />
-        <meta property="og:url" content="https://www.oopy.io"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:title" content="1분 만에 만드는 노션 웹사이트, 우피!"/>
-        <meta property="og:description" content="우피는 노션 페이지를 최적화된 웹사이트로 바꿔드립니다. 원하는 주소를 연결하여 나만의 홈페이지를 시작해 보세요."/>
-        <meta property="og:image" content="https://oopy.lazyrockets.com/api/rest/cdn/image/a763e278-d990-4beb-b3b2-0861ec4e4d99.png"/>
+        <meta name='url' property="og:url" content={currentUrl}/>
+        <meta name='type' property="og:type" content="website"/>
+        <meta name='title' property="og:title" content="1분 만에 만드는 노션 웹사이트, 우피!"/>
+        <meta name='description' property="og:description" content="우피는 노션 페이지를 최적화된 웹사이트로 바꿔드립니다. 원하는 주소를 연결하여 나만의 홈페이지를 시작해 보세요."/>
+        <meta name='image' property="og:image" content="../src/img/main.jpg"/>
         </Helmet>
       <div className="home">
         <div className="my_div">
