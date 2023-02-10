@@ -23,6 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 .server.js
 .number.json
-
+number.json
 #folder ignore
 # dist/

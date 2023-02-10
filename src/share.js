@@ -46,9 +46,9 @@ export default function Share() {
           <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
         </FacebookShareButton>
       </div>
-      <FacebookMessengerShareButton style={{ marginRight: "20px" }} url={URL}>
-        <FacebookMessengerIcon size={48} round={true} borderRadius={24}></FacebookMessengerIcon>
-      </FacebookMessengerShareButton>
+      <LineShareButton style={{ marginRight: "20px" }} url={URL}>
+        <LineIcon size={48} round={true} borderRadius={24}></LineIcon>
+      </LineShareButton>
       <TwitterShareButton style={{ marginRight: "20px" }} url={URL}>
         <TwitterIcon size={48} round={true} borderRadius={24}></TwitterIcon>
       </TwitterShareButton>
