@@ -6,6 +6,7 @@ import AnimatedNumbers from "react-animated-numbers";
 import logo from "./img/11.png";
 import { Helmet } from "react-helmet";
 
+
 const Home = () => {
   const history = useHistory();
   const num_from_Server = 133333;
@@ -24,6 +25,15 @@ const Home = () => {
           setNum(data[0].number);
         }, 1000);
       });
+
+      const script = document.createElement("script");
+      script.src = "https://developers.kakao.com/sdk/js/kakao.js";
+      script.async = true;
+      document.body.appendChild(script);
+      return () => document.body.removeChild(script);
+
+
+
   }, []);
 
   return (
@@ -34,7 +44,7 @@ const Home = () => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta name="description" content="나는 어떤 래퍼?" />
+        {/* <meta name="description" content="나는 어떤 래퍼?" /> */}
         <meta property="og:url" content="http://35.247.42.172:5000/" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="크럼프 래퍼 테스트" />
