@@ -44,7 +44,7 @@ export default function Share() {
     
     <>
     
-    <Helmet>
+    {/* <Helmet>
         
         <title>크럼프 래퍼 테스트</title>
         <meta charset="utf-8" />
@@ -66,7 +66,7 @@ export default function Share() {
           property="og:image"
           content="../src/img/main.jpg"
         />
-      </Helmet>
+      </Helmet> */}
       <div className="icon">
         <FacebookShareButton style={{ marginRight: "20px" }} url={URL}>
           <FacebookIcon size={48} round={true} borderRadius={24}></FacebookIcon>
