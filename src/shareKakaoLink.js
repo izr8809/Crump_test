@@ -15,16 +15,7 @@ export const shareKakao = (route, title) => { // url이 id값에 따라 변경�
             mobileWebUrl: "http://35.247.42.172:5000/", // 인자값으로 받은 route(uri 형태)
             webUrl: "http://35.247.42.172:5000/"
           }
-        },
-        buttons: [
-          {
-            title: "title",
-            link: {
-              mobileWebUrl: route,
-              webUrl: route
-            }
-          }
-        ]
+        }
       });
     }
   };
