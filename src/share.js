@@ -37,7 +37,8 @@ export default function Share() {
     
   const location = useLocation();
 	const currentUrl = window.location.href;
-  URL = URL + useLocation.pathname
+  console.log(currentUrl)
+  URL = currentUrl
   return (
     <>
       <div className="icon">
