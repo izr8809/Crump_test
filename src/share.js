@@ -45,13 +45,15 @@ export default function Share() {
     <>
     
     <Helmet>
+        
         <title>크럼프 래퍼 테스트</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
           content="Beginner friendly page for learning React Helmet."
         />
         <meta property="og:url" content={currentUrl} />
-        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="1분 만에 만드는 노션 웹사이트, 우피!"
@@ -62,7 +64,7 @@ export default function Share() {
         />
         <meta
           property="og:image"
-          content="https://oopy.lazyrockets.com/api/rest/cdn/image/a763e278-d990-4beb-b3b2-0861ec4e4d99.png"
+          content="../src/img/main.jpg"
         />
       </Helmet>
       <div className="icon">
