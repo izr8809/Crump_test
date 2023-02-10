@@ -28,27 +28,6 @@ const Home = () => {
 
   return (
     <BrowserRouter>
-      <Helmet>
-        <title>크럼프 래퍼 테스트</title>
-        <meta
-          name="description"
-          content="Beginner friendly page for learning React Helmet."
-        />
-        <meta property="og:url" content="https://www.oopy.io" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="1분 만에 만드는 노션 웹사이트, 우피!"
-        />
-        <meta
-          property="og:description"
-          content="우피는 노션 페이지를 최적화된 웹사이트로 바꿔드립니다. 원하는 주소를 연결하여 나만의 홈페이지를 시작해 보세요."
-        />
-        <meta
-          property="og:image"
-          content="https://oopy.lazyrockets.com/api/rest/cdn/image/a763e278-d990-4beb-b3b2-0861ec4e4d99.png"
-        />
-      </Helmet>
       <div className="home">
         <div className="my_div">
           <img className="my_bg" src={"./img/main.jpg"}></img>
