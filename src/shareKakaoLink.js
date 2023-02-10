@@ -12,8 +12,8 @@ export const shareKakao = (route, title) => { // url이 id값에 따라 변경�
           description: "나는 어떤 래퍼?", // 인자값으로 받은 title
           imageUrl: "../src/img/main.jpg",
           link: {
-            mobileWebUrl: route, // 인자값으로 받은 route(uri 형태)
-            webUrl: route
+            mobileWebUrl: "http://35.247.42.172:5000/", // 인자값으로 받은 route(uri 형태)
+            webUrl: "http://35.247.42.172:5000/"
           }
         },
         buttons: [
