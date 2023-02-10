@@ -7,7 +7,6 @@ export const shareKakao = (route, title) => { // url이 id값에 따라 변경�
         KAKAOKEY = '535a20d8e74fc29556d129acc8efc007';
         console.log(KAKAOKEY);
         kakao.init(KAKAOKEY); // 카카오에서 제공받은 javascript key를 넣어줌 -> .env파일에서 호출시킴
-        console.log(kakao.init(KAKAOKEY));
       }
   
       kakao.Link.sendDefault({
